@@ -9,6 +9,9 @@ import { NavBarComponent } from './shared/nav-bar/nav-bar.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { AuthComponent } from './components/auth/auth.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HeroeComponent } from './components/heroe/heroe.component';
+import { StorageComponent } from './components/storage/storage.component';
+import { LootComponent } from './components/loot/loot.component';
 
 
 
@@ -20,6 +23,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     NavBarComponent,
     FooterComponent,
     AuthComponent,
+    HeroeComponent,
+    StorageComponent,
+    LootComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, NgbModule],
   providers: [],
