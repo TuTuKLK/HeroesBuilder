@@ -1,13 +1,9 @@
-export interface Account {
-    UserID: number;
+export interface IAccount {
     LastName: string;
     FirstName: string;
     Login: string;
-    Mail: string
-
+    Mail: string;
 }
 
-
-export interface Monstre{    PK_Monstre:number;    NomMonstre:string;    Exp:number;}
 
 

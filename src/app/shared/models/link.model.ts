@@ -1,12 +1,12 @@
 export class Link {
     public title: string;
-    public url?: string;
+    public path?: string;
     public children?: Link[];
     public isVisible?: boolean;
 
-    constructor(title: string, url?: string, children?: Link[], isVisible?: boolean) {
+    constructor(title: string, path?: string, children?: Link[], isVisible?: boolean) {
         this.title = title;
-        this.url = url;
+        this.path = path;
         this.isVisible = isVisible;
         if (children === undefined) children = [];
         this.children = children;

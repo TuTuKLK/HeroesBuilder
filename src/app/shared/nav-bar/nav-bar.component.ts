@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Link } from './link';
+import { Link } from '../models/link.model';
 
 @Component({
   selector: 'app-nav-bar',
@@ -8,14 +8,15 @@ import { Link } from './link';
 })
 export class NavBarComponent implements OnInit {
 
-  public links: Link[];
+  public links: Link[]=[
+    {title: 'Acceuil', path:''},
+    {title: 'Connexion', path: 'auth'}
+  ];
   constructor() { 
-    this.links = [];
   }
 
   ngOnInit(): void {
-    this.links.push(new Link('Accueil', '/'))
-    this.links.push(new Link('Connexion', '/shop'))
+
   }
 
 }
