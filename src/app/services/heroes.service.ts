@@ -8,10 +8,14 @@ import { url } from '../shared/const/temp-url.const';
   providedIn: 'root'
 })
 export class HeroesService {
+  public userID = 4
 
   constructor(private _http: HttpClient) { }
 
-  public getHeroe(id:number): Observable <IHeroe[]>{
-    return this._http.get<IHeroe[]>(`${url}heroes/${id}`)
+  public getHeroe(id:number): Observable <IHeroe>{
+    return this._http.get<IHeroe>(`${url}heroes/${id}`)
+  }
+  public getHeroeAcc(id:number): Observable <IHeroe[]>{
+    return this._http.get<IHeroe[]>(`${url}heroes/user/${id}`)
   }
 }

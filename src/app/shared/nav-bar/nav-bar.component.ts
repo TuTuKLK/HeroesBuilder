@@ -9,8 +9,13 @@ import { Link } from '../models/link.model';
 export class NavBarComponent implements OnInit {
 
   public links: Link[]=[
+    {title: 'Connexion', path: 'auth'},
     {title: 'Acceuil', path:''},
-    {title: 'Connexion', path: 'auth'}
+  ];
+  public userlinks: Link[]=[
+    {title: 'Héro', path: 'heroe'},
+    {title: 'Stockage', path: 'storage'},
+    {title: 'Items', path: 'loot'},
   ];
   constructor() { 
   }

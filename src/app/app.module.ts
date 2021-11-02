@@ -17,6 +17,7 @@ import { StorageComponent } from './components/storage/storage.component';
 import { LootComponent } from './components/loot/loot.component';
 import { CreateComponent } from './components/create/create.component';
 import { RegisterComponent } from './components/register/register.component';
+import { ControlePanelComponent } from './components/controle-panel/controle-panel.component';
 
 
 
@@ -33,6 +34,7 @@ import { RegisterComponent } from './components/register/register.component';
     LootComponent,
     CreateComponent,
     RegisterComponent,
+    ControlePanelComponent,
     
   ],
   imports: [BrowserModule, AppRoutingModule, NgbModule,ReactiveFormsModule,HttpClientModule],

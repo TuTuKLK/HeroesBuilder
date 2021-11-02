@@ -11,7 +11,7 @@ import { home } from 'src/app/shared/const/home.const';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent implements OnInit {
-  public cancel = home
+  public cancel = '/auth'
   constructor(private _fb:FormBuilder,private _userService:UserAccountsService) { }
   registerForm: FormGroup = new FormGroup({});
   

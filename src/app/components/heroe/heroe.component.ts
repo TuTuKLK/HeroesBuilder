@@ -1,4 +1,6 @@
+import { IHeroe } from './../../interface/heroe';
 import { Component, OnInit } from '@angular/core';
+import { HeroesService } from 'src/app/services/heroes.service';
 
 @Component({
   selector: 'app-heroe',
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./heroe.component.scss']
 })
 export class HeroeComponent implements OnInit {
+  public heroes: IHeroe[] = []
 
-  constructor() { }
+  public storage = 'storage'
+  constructor(private _heroserv:HeroesService) { }
 
   ngOnInit(): void {
+    this._heroserv.getHeroeAcc(4).subscribe(data=>this.heroes=data)
   }
 
 }
