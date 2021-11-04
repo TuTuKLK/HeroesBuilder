@@ -13,6 +13,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 })
 export class AuthComponent implements OnInit {
   public registerPath = 'register';
+  public valid = '/heroe';
   public cancel = home
 
   constructor(private _fb:FormBuilder,private _userService:UserAccountsService) { }
@@ -23,9 +24,7 @@ export class AuthComponent implements OnInit {
       Login:'',
       Password:'',
     })
-
     console.log(this.authForm);
-
   }
   submitAuth(){
     this._userService.postAuth(this.authForm.value)

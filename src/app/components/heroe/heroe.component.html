@@ -1,4 +1,29 @@
-<ng-container *ngFor="let heroe of heroes">
-    <app-controle-panel [heroe]="heroe"></app-controle-panel>
+<div class="row">
+  <app-user></app-user>
+</div>
 
+<div class="row">
+  <div class="row">
+    <h2 class="col s2">Liste de vos héros</h2>
+    <button
+      class="col s1"
+      class="pointer"
+      [routerLink]="newHeroe"
+      class="btn-floating btn-large waves-effect teal darken-1"
+    >
+      <i class="material-icons">control_point</i>
+    </button>
+    <!-- <div class="col s1"></div> -->
+  </div>
+</div>
+<div class="row">
+  <div class="col s2 offset-s1">
+    <ng-container *ngFor="let heroe of heroes">
+      <app-controle-panel [heroe]="heroe"></app-controle-panel>
+    </ng-container>
+  </div>
+  <!-- <div class="col s9"></div> -->
+</div>
+<ng-container>
+  <app-storage></app-storage>
 </ng-container>

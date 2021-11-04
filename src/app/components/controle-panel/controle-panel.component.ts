@@ -1,3 +1,4 @@
+import { HeroesService } from './../../services/heroes.service';
 import { IHeroe } from './../../interface/heroe';
 import { Component, Input, OnInit } from '@angular/core';
 
@@ -9,9 +10,13 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ControlePanelComponent implements OnInit {
   @Input() heroe!:IHeroe
 
-  constructor() { }
+  constructor(private _heroes:HeroesService) { }
 
   ngOnInit(): void {
+  }
+  deleteHeroeByID(id:number){
+    console.log(id);
+    this._heroes.deleteHeroe(id).subscribe()
   }
 
 }

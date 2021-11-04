@@ -1,13 +1,17 @@
-<ng-container [formGroup]="authForm" *ngIf="authForm">
-  <div *ngFor="let control of authForm.controls | keyvalue">
+<div class="container">
+  <div class="row">
+    <ng-container [formGroup]="authForm" *ngIf="authForm">
+      <div *ngFor="let control of authForm.controls | keyvalue">
+        <div>
+          <div>{{ control.key }}</div>
+          <input type="text" formControlName="{{ control.key }}" />
+        </div>
+      </div>
+    </ng-container>
     <div>
-      <div>{{ control.key }}</div>
-      <input type="text" formControlName="{{ control.key }}" />
+      <button [routerLink]="registerPath">S'enregistrer</button>
+      <button [routerLink]="cancel">Annuler</button>
+      <button [routerLink]="valid" (click)="submitAuth()">Envoyer</button>
     </div>
   </div>
-</ng-container>
-<div>
-  <button [routerLink]="registerPath" >S'enregistrer</button>
-  <button [routerLink]="cancel" >Annuler</button>
-  <button (click)="submitAuth()">Envoyer</button>
 </div>

@@ -15,9 +15,12 @@ import { AuthComponent } from './components/auth/auth.component';
 import { HeroeComponent } from './components/heroe/heroe.component';
 import { StorageComponent } from './components/storage/storage.component';
 import { LootComponent } from './components/loot/loot.component';
-import { CreateComponent } from './components/create/create.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ControlePanelComponent } from './components/controle-panel/controle-panel.component';
+import { CreateHeroComponent } from './components/heroe/create-hero/create-hero.component';
+import { CreateStorageComponent } from './components/storage/create-storage/create-storage.component';
+import { CreateLootComponent } from './components/loot/create-loot/create-loot.component';
+import { UserComponent } from './components/user/user.component';
 
 
 
@@ -32,9 +35,12 @@ import { ControlePanelComponent } from './components/controle-panel/controle-pan
     HeroeComponent,
     StorageComponent,
     LootComponent,
-    CreateComponent,
     RegisterComponent,
     ControlePanelComponent,
+    CreateHeroComponent,
+    CreateStorageComponent,
+    CreateLootComponent,
+    UserComponent,
     
   ],
   imports: [BrowserModule, AppRoutingModule, NgbModule,ReactiveFormsModule,HttpClientModule],

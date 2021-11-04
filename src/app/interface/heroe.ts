@@ -1,10 +1,12 @@
 export interface IHeroe {
+        HeroeID: number;
+        UserAccount: number;
         Name: string;
         FirstName: string;
         Gender: string;
         Race: string;
-        Experience: number;
         Level: number;
+        Experience: number;
         Health: number;
         Strength: number;
         Dexterity:number;

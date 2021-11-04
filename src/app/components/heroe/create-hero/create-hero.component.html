@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
-    <ng-container [formGroup]="registerForm" *ngIf="registerForm">
-      <div *ngFor="let control of registerForm.controls | keyvalue">
+    <ng-container [formGroup]="creatHeroForm" *ngIf="creatHeroForm">
+      <div *ngFor="let control of creatHeroForm.controls | keyvalue">
         <div>
           <div>{{ control.key }}</div>
           <input type="text" formControlName="{{ control.key }}" />
@@ -10,7 +10,7 @@
     </ng-container>
     <div>
       <button [routerLink]="cancel">Annuler</button>
-      <button [routerLink]="valid" (click)="submitAuth()">Envoyer</button>
+      <button (click)="submitHero()" [routerLink]="cancel">Envoyer</button>
     </div>
   </div>
 </div>

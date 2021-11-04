@@ -12,6 +12,7 @@ import { home } from 'src/app/shared/const/home.const';
 })
 export class RegisterComponent implements OnInit {
   public cancel = '/auth'
+  public valid = '/heroe'
   constructor(private _fb:FormBuilder,private _userService:UserAccountsService) { }
   registerForm: FormGroup = new FormGroup({});
   
@@ -25,8 +26,8 @@ export class RegisterComponent implements OnInit {
     })
 
     console.log(this.registerForm);
-
   }
+  
   submitAuth(){
     this._userService.postRegister(this.registerForm.value)
     console.log(this.registerForm);
