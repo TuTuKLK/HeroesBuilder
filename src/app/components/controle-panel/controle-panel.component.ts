@@ -16,7 +16,8 @@ export class ControlePanelComponent implements OnInit {
   }
   deleteHeroeByID(id:number){
     console.log(id);
-    this._heroes.deleteHeroe(id).subscribe()
+    this._heroes.deleteHeroe(id).subscribe();
+    location.reload();
   }
 
 }

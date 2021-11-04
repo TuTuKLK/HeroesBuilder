@@ -17,20 +17,20 @@ export class CreateHeroComponent implements OnInit {
 
   ngOnInit(): void {
     this.creatHeroForm=this._fb.group({
-      UserAccount: '',
+      UserAccount: '4',
       Name: '',
       FirstName: '',
       Gender: '',
       Race: '',
-      Experience: '',
-      Level: '',
-      Health: '',
-      Strength: '',
-      Dexterity:'',
-      Constitution:'',
-      Intelligence:'',
-      Wisdom:'',
-      Charisma:''
+      Experience: '1000',
+      Level: '10',
+      Health: '100',
+      Strength: '10',
+      Dexterity:'10',
+      Constitution:'10',
+      Intelligence:'10',
+      Wisdom:'10',
+      Charisma:'10'
     })
     console.log(this.creatHeroForm);
   }
