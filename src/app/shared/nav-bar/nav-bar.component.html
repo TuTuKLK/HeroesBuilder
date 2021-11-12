@@ -13,7 +13,7 @@
     </div>
   </div>
 
-  <div class="nav-content">
+  <div class="nav-content" *ngIf="_userAccount.userAuthentified">
     <ul class="tabs tabs-transparent">
       <div *ngFor="let userlink of userlinks">
         <li class="tab">

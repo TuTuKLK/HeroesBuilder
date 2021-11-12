@@ -1,3 +1,5 @@
+import { UserAccountsService } from './../../services/user-accounts.service';
+import { SessionStorageService } from './../../services/session-storage.service';
 import { Component, OnInit } from '@angular/core';
 import { Link } from '../models/link.model';
 
@@ -17,12 +19,9 @@ export class NavBarComponent implements OnInit {
     {title: 'Stockage', path: 'storage'},
     {title: 'Items', path: 'loot'},
   ];
-  constructor() { 
-  }
+  constructor(public _userAccount:UserAccountsService) {  }
 
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void {  }
 
 }
 

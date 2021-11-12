@@ -16,7 +16,7 @@ export class HeroesService {
   public getHeroe(id:number): Observable <IHeroe>{
     return this._http.get<IHeroe>(`${url}heroes/${id}`)
   }
-  public getHeroeAcc(id:number): Observable <IHeroe[]>{
+  public getHeroeAcc(id:string): Observable <IHeroe[]>{
     return this._http.get<IHeroe[]>(`${url}heroes/user/${id}`)
   }
   public postRegister(registerForm:FormGroup):any{
