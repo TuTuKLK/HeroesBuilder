@@ -25,13 +25,10 @@ export class RegisterComponent implements OnInit {
       Mail: ''
     })
 
-    console.log(this.registerForm);
   }
   
   submitAuth(){
     this._userService.postRegister(this.registerForm.value)
-    console.log(this.registerForm);
-    
   }
 
 }

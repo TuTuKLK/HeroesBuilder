@@ -16,10 +16,10 @@
     <!-- <div class="col s1"></div> -->
   </div>
 </div>
-<div class="row">
+<div class="row" *ngIf="heroes | async as heroes">
   <div class="col s2 offset-s1">
-    <ng-container *ngFor="let heroe of heroes | async">
-      <app-controle-panel [heroe]="heroe" *ngIf="heroes"></app-controle-panel>
+    <ng-container *ngFor="let heroe of heroes">
+      <app-controle-panel [heroe]="heroe"></app-controle-panel>
     </ng-container>
   </div>
   <!-- <div class="col s9"></div> -->

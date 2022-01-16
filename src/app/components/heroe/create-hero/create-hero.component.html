@@ -4,7 +4,7 @@
       <div *ngFor="let control of creatHeroForm.controls | keyvalue">
         <div>
           <div>{{ control.key }}</div>
-          <input type="text" formControlName="{{ control.key }}" />
+          <input type="text" formControlName="{{ control.key }}" *ngIf="control.key !== 'UserAccount'" />
         </div>
       </div>
     </ng-container>

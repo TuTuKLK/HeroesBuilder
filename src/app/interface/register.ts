@@ -1,5 +1,4 @@
-export interface IAccount {
-    UserID: number;
+export interface IRegister {
     LastName: string;
     FirstName: string;
     Login: string;

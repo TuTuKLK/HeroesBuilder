@@ -1,7 +1,6 @@
 import { IAccount } from './../../interface/account';
 import { SessionStorageService } from './../../services/session-storage.service';
 import { home } from 'src/app/shared/const/home.const';
-import { Link } from './../../shared/models/link.model';
 import { Component, OnInit } from '@angular/core';
 
 import { UserAccountsService } from './../../services/user-accounts.service';
@@ -30,7 +29,9 @@ export class AuthComponent implements OnInit {
     this.authForm = this._fb.group({
       Login: '',
       Password: '',
+      
     });
+
   }
   submitAuth() {
     this._userService.postAuth(this.authForm.value).subscribe((r: IAccount) => {

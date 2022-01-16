@@ -1,3 +1,4 @@
+import { SessionStorageService } from './../../../services/session-storage.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { HeroesService } from 'src/app/services/heroes.service';
@@ -13,11 +14,12 @@ export class CreateHeroComponent implements OnInit {
 
 
 
-  constructor(private _heroserv:HeroesService,private _fb:FormBuilder) { }
+  constructor(private _heroserv:HeroesService,private _fb:FormBuilder, private _sessionStorage:SessionStorageService) { }
 
   ngOnInit(): void {
+    const userID= this._sessionStorage.getSessionStorage('userID')
     this.creatHeroForm=this._fb.group({
-      UserAccount: '4',
+      UserAccount: userID,
       Name: '',
       FirstName: '',
       Gender: '',
